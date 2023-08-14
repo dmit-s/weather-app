@@ -1,0 +1,127 @@
+@import "normalize.css";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+button {
+  border: 0;
+  padding: 0;
+  background: none;
+  color: inherit;
+}
+
+input {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  outline: none;
+}
+
+:root {
+  --clr-yellow: #d5d500;
+  --clr-purple: #b169b1;
+  --clr-rose: #ff00a0;
+  --clr-black: #000;
+  --clr-error: #ff4747;
+  --clr-success: #4dff47;
+}
+
+body[data-theme="dark"] {
+  --bg: radial-gradient(circle, #10001f 0%, #070016 100%);
+  --primary: #ecf3e9;
+  --secondary: #c2c7c0;
+  --bg-primary: #33354a;
+  --bg-secondary: #0f111c;
+  --bg-third: #818181;
+  --bg-third-hover: #868686;
+  --bg-active: linear-gradient(90deg, #3c59a4, #003d82);
+  --hover-clr: #3f3f53;
+  --hover-shadow-clr: 0px 0px 10px 0px hsla(278, 100%, 90%, 0.6);
+  --scrollbar-track: #070016;
+  --scrollbar-thumb: #494949;
+  --scrollbar-thumb-hover: #575757;
+}
+
+body[data-theme="light"] {
+  --bg: radial-gradient(circle, #e5e1ff 0%, #e9e1f0 100%);
+  --primary: #000;
+  --secondary: #2b2b2b;
+  --bg-primary: #f8f8f8;
+  --bg-secondary: #d7d5ea;
+  --bg-third: #dbdbdb;
+  --bg-third-hover: #cecece;
+  --bg-active: linear-gradient(90deg, #a1a4ff, #b4d7ff);
+  --hover-clr: #f0f0f0;
+  --hover-shadow-clr: 0px 0px 10px 0px hsla(206, 40%, 22%, 0.4);
+  --scrollbar-track: #e9e1f0;
+  --scrollbar-thumb: #c5c5c5;
+  --scrollbar-thumb-hover: #aaaaaa;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+}
+
+/* Chrome, Edge and Safari */
+*::-webkit-scrollbar {
+  width: 8px;
+  width: 8px;
+}
+*::-webkit-scrollbar-track {
+  background-color: var(--scrollbar-track);
+}
+
+/* *::-webkit-scrollbar-track:hover {
+  background-color: #DFE9EB;
+} */
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  background-color: var(--scrollbar-thumb);
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: var(--scrollbar-thumb-hover);
+  transition: 0.5s;
+}
+
+html {
+  @media (max-width: 1024px) {
+    font-size: 14px;
+  }
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  scrollbar-gutter: "stable";
+  color: var(--primary);
+  background: var(--bg);
+}
